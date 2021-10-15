@@ -3,9 +3,9 @@ package ex_8;
 import java.util.Collection;
 
 public interface IWaitList<E> {
-    public void add(E element);
-    public E remove();
-    public boolean contains(E element);
-    public boolean containsAll(Collection<E> c);
-    public boolean isEmpty();
+     void add(E element);
+     E remove();
+     boolean contains(E element);
+     boolean containsAll(Collection<E> c);
+     boolean isEmpty();
 }
