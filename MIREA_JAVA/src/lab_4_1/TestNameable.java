@@ -1,4 +1,4 @@
-package lab4_1;
+package lab_4_1;
 
 public class TestNameable {
     public static void main(String[] args) {

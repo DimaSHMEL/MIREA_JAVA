@@ -1,4 +1,4 @@
-package lab3_2;
+package lab_3_2;
 
 public abstract class Dog {
     private String name;

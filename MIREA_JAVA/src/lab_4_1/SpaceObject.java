@@ -1,4 +1,4 @@
-package lab4_1;
+package lab_4_1;
 
 public abstract class SpaceObject {
     private String name;
