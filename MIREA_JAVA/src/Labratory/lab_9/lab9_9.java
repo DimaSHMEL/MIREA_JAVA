@@ -76,26 +76,27 @@ class Exception2 {
 }
 //Задание 5....8
 class ThrowsDemo {
-    public void getKey(){
+    public void getKey() throws Exception{
         Scanner myScanner = new Scanner( System.in );
         while(true)
         {
             System.out.print("Enter Key ");
             String key = myScanner.nextLine();
-            try
-            {
-                printDetails(key);
+//            try
+//            {
+                printDetails(key) ;
                 break;
-            }
-            catch (Exception e) {
-                System.out.println("Not valid key? try again");
-                continue;
-            }
+//            }
+//            catch (Exception e) {
+//                System.out.println("Not valid key? try again");
+//                continue;
+//            }
         }
     }
     public void printDetails(String key) throws Exception {
         String message = getDetails(key);
         System.out.println( message ); }
+
     private String getDetails(String key) throws Exception {
         if(key.equals("")) {
             throw new Exception( "Key set to empty string" );

@@ -11,9 +11,9 @@ public class TelephoneEncoder {
             String phone;
             //Проверка на + вначале
             if (country.charAt(0) == '+') {
-                phone = country + number.substring(0, 3) + "-" + number.substring(3, 6) + "-" + number.substring(6, 10);
+                phone = country + "-" + number.substring(0, 3) + "-" + number.substring(3, 6) + "-" + number.substring(6, 10);
             } else {
-                phone = "+" + country + number.substring(0, 3) + "-" + number.substring(3, 6) + "-" + number.substring(6, 10);
+                phone = "+" + country + "-" + number.substring(0, 3) + "-" + number.substring(3, 6) + "-" + number.substring(6, 10);
             }
             return phone;
         }

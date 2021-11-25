@@ -37,7 +37,7 @@ public class TestEx12 {
         }
         //Четвёртое задание
         TelephoneEncoder E = new TelephoneEncoder();
-        String phone = E.normalPhone("104289652211");
+        String phone = E.normalPhone("+49874959652211");
         System.out.println(phone);
     }
 
