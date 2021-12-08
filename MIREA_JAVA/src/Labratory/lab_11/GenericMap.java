@@ -18,6 +18,10 @@ public class GenericMap<K,V> {
         return this.dataset.get(key);
     }
 
+    public void delete(K key) { dataset.remove(key); }
+
+    public void clear() { dataset.clear(); }
+
     public boolean checkkey(K key)
     {
         return dataset.containsKey(key);

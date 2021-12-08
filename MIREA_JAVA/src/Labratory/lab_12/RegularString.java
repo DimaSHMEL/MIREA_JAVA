@@ -4,6 +4,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegularString {
+    public String ex_1(String data)
+    {
+        String regex = "\\d{1,} (RUB)|(USD)|(EU)";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(data);
+        return m.group();
+    }
     public boolean ex_3(String date)
     {
      String regex = "([1-2][0-9]|0[1-9]|30)/(0[469]|11)/(19[0-9][0-9]|[2-9][0-9][0-9][0-9])|" +
@@ -13,5 +20,12 @@ public class RegularString {
      Pattern p = Pattern.compile(regex);
      Matcher m = p.matcher(date);
      return m.matches();
+    }
+    public boolean ex_4(String date)
+    {
+        String regex = "\\w{1,}@\\w{1,}";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(date);
+        return  m.matches();
     }
 }
