@@ -15,7 +15,7 @@ public class ex16 {
             else if( val == max)
                 return  max_quan(max, quan + 1);
             else
-                return max_quan(max, val);
+                return max_quan(max, quan);
         }
 
     }

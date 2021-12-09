@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class TestEx5
 {
     public static void main(String[] args) {
+        System.out.println("Ex 16");
         Scanner scan = new Scanner(System.in);
         //ex12 EX12 = new ex12();
         //EX12.not_even_rec();
@@ -16,5 +17,5 @@ public class TestEx5
         //EX15.answ(scan.nextInt());
         ex16 EX16 = new ex16();
         System.out.print(EX16.max_quan(0,1));
-    }
+    }//
 }
