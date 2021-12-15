@@ -27,8 +27,5 @@ public class TestWaitList {
         System.out.println(three);
         three.moveToBack();
         System.out.println(three);
-
-
-
     }
 }

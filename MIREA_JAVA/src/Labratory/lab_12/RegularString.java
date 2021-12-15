@@ -4,12 +4,28 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegularString {
-    public String ex_1(String data)
+    public void ex_1(String data)
     {
-        String regex = "\\d{1,} (RUB)|(USD)|(EU)";
+        String regex = "(((\\d+)|(\\d+\\.\\d+)) ((RUB)|(USD)|(EU)))";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(data);
-        return m.group();
+        while (m.find()) {
+            System.out.println(data.substring(m.start(), m.end()));
+        }
+    }
+     public boolean ex_2(String check)
+     {
+         String regex = "abcdefghijklmnopqrstuv18340";
+         Pattern p = Pattern.compile(regex);
+         Matcher m = p.matcher(check);
+         return  m.matches();
+     }
+    public boolean ex_3_2(String date) {
+        String regex = "(\"\\\\d\\\\s*\\\\+\");";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(date);
+        return m.matches();
+
     }
     public boolean ex_3(String date)
     {
@@ -23,9 +39,16 @@ public class RegularString {
     }
     public boolean ex_4(String date)
     {
-        String regex = "\\w{1,}@\\w{1,}";
+        String regex = "\\w+@\\w+";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(date);
+        return  m.matches();
+    }
+    public boolean ex_5(String pass)
+    {
+        String regex = "(?=.*[a-z].*)(?=.*[A-Z].*)(?=.*\\d.*).\\w{7,}";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(pass);
         return  m.matches();
     }
 }

@@ -43,8 +43,9 @@ class Task_1
 class task_2 {
     Calendar calendar = Calendar.getInstance();
     SimpleDateFormat forma = new SimpleDateFormat("dd.MM.yyyy");
-
+    Date date_sys = new Date();
     public task_2() {
+        Date date_us = new Date(System.currentTimeMillis());
         Calendar calendar = Calendar.getInstance();
         Calendar user = Calendar.getInstance();
         System.out.println(forma.format(calendar.getTime()) + " " + forma.format(user.getTime()) );
@@ -54,6 +55,13 @@ class task_2 {
             System.out.println("Даты равны больше");
         else
             System.out.println("Правая дата больше больше");
+        System.out.println(forma.format((date_sys)) + " " + forma.format(date_us));
+        if(date_sys.getTime() > date_us.getTime())
+            System.out.println("Время системы больше");
+        else if(date_sys.getTime() < date_us.getTime())
+            System.out.println("Время юзера больше");
+        else
+            System.out.println("Даты равны больше");
 
     }
 
