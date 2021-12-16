@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
 public class MouseCool extends JFrame {
     private int height = 1000, width = 1000;
     private JLabel Djida =  new JLabel("Джида");

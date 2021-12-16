@@ -120,7 +120,7 @@ class task_4
         int year = scan.nextInt(); int month = scan.nextInt(); int day = scan.nextInt();
         int hour = scan.nextInt(); int minutes = scan.nextInt();
         calendar.set(year, month-1, day, hour, minutes);
-        date.setYear(year); date.setMonth(month-1); date.setDate(day);
+        date.setYear(year - 1900); date.setMonth(month-1); date.setDate(day);
         date.setHours(hour); date.setMinutes(minutes);
     }
 
@@ -163,6 +163,5 @@ class task_5
        larr.indexOf(4);
        estimated_time = System.nanoTime() - start_time;
        System.out.println("Time to finding elemt in LinkedList " + estimated_time + "ns \n");
-
    }
 }

@@ -22,9 +22,6 @@ public class Test_ex_14 {
         person.setformat("long");
         System.out.println(person);
         System.out.println();
-
-
-
         task_4 t4 = new task_4();
         System.out.println(t4);
 

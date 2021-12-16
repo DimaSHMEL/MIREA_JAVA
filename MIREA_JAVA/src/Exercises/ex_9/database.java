@@ -1,11 +1,7 @@
 package Exercises.ex_9;
-
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class database implements methods {
-
-
     class StudentNotFoundExeption extends Exception
     {
         public StudentNotFoundExeption(String errmessg)
@@ -13,10 +9,8 @@ public class database implements methods {
             super(errmessg);
         }
     }
-
     private Scanner scanner = new Scanner(System.in);
     private ArrayList<Person> database = new ArrayList<>();
-
     public database()
     {
         System.out.print("Введите количество элементов ");
@@ -35,9 +29,10 @@ public class database implements methods {
             }
         }
     }
-
-    public Person search_by_name(String name) throws StudentNotFoundExeption
+    public Person search_by_name(String name) throws StudentNotFoundExeption, EmptyStringExeption
     {
+        if (name == "")
+            throw new EmptyStringExeption("Empty string");
         Person temp = new Person();
         for(Person s : database)
         {
@@ -50,7 +45,6 @@ public class database implements methods {
         }
         return temp;
     }
-
     public Boolean search(Person key)  throws StudentNotFoundExeption
     {
         for(Person s : database)

@@ -1,6 +1,4 @@
 package Exercises.ex_9;
-
-
 public class Person {
     int INN;
     String Name;
@@ -17,4 +15,12 @@ public class Person {
                 throw new EmptyStringExeption("Person name can't be empty");
             this.Name = Name;
         }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "INN=" + INN +
+                ", Name='" + Name + '\'' +
+                '}';
+    }
 }

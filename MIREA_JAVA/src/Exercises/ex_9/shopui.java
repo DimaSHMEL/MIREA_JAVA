@@ -23,6 +23,8 @@ public class shopui {
                 System.out.println(DATA.search_by_name(temp));
             } catch (database.StudentNotFoundExeption err) {
                 System.out.println("Student not in databasse");
+            } catch (EmptyStringExeption err) {
+                System.out.println("Person can't be with empty name");
             }
         }
     }
