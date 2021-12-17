@@ -1,9 +1,16 @@
 package Labratory.lab_12;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 public class RegularString {
+    public void ex_1_2(String data, String del)
+    {
+        String regex = "[^"  + del + "]*";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(data);
+        while (m.find()) {
+            System.out.println(data.substring(m.start(), m.end()));
+        }
+    }
     public void ex_1(String data)
     {
         String regex = "(((\\d+)|(\\d+\\.\\d+)) ((RUB)|(USD)|(EU)))";

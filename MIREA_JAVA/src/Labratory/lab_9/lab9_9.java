@@ -82,15 +82,15 @@ class ThrowsDemo {
         {
             System.out.print("Enter Key ");
             String key = myScanner.nextLine();
-//            try
-//            {
+           try
+           {
                 printDetails(key) ;
                 break;
-//            }
-//            catch (Exception e) {
-//                System.out.println("Not valid key? try again");
-//                continue;
-//            }
+            }
+            catch (Exception e) {
+                System.out.println("Not valid key? try again");
+                continue;
+            }
         }
     }
     public void printDetails(String key) throws Exception {

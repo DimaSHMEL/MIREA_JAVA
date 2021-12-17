@@ -6,7 +6,7 @@ public class CmdOutput {
     public CmdOutput(String Elem)
     {
         try {
-            FileWriter writer = new FileWriter("src/Labratory.lab_8_1/Output.txt", false);
+            FileWriter writer = new FileWriter("src/Labratory/lab_8_1/Output.txt", false);
             writer.write(Elem);
             writer.flush();
             writer.close();
